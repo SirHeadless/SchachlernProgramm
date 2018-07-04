@@ -1,0 +1,37 @@
+{
+    "name": "public",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "webpack",
+      "start": "react-scripts-ts start"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@types/react": "^15.0.4",
+      "@types/react-dom": "^15.5.4",
+      "react": "^15.6.1",
+      "react-dom": "^15.6.1",
+      "@types/react-redux": "^5.0.7",
+      "react-websocket": "^1.1.7",
+      "redux": "^3.7.2",
+      "redux-thunk": "^2.2.0",
+      "sockjs": "^0.3.18",
+      "sockjs-client": "^1.1.1",
+      "stompjs": "^2.3.3",
+      "webpack": "^3.5.5"
+    },
+    "devDependencies": {
+      "awesome-typescript-loader": "^3.2.3",
+      "css-loader": "^0.28.5",
+      "source-map-loader": "^0.2.1",
+      "style-loader": "^0.18.2",
+      "typescript": "^2.4.2",
+      "react-scripts-ts": "2.13.0",
+      "image-webpack-loader": "4.1.0"
+    }
+  }
+  
