@@ -1,25 +1,25 @@
-import * as React from "react"
-import Field from "./Field"
-import Points from "./Points"
+import * as React from 'react';
+import Field from './Field';
+import Points from './Points';
 // import {Game} from "../store/classes/Game"
-import {connect} from "react-redux"
+import { connect } from 'react-redux';
 
 class Board extends React.Component<any, any> {
 
     render() {
         const size = 8;
-        var rows : any[]= [];
-        var cells : any[] = [];
+        var rows: any[] = [];
+        var cells: any[] = [];
         var fields = this.props.gameField.field;
         var figure;
         for (var i = 0; i < size; i++) {
             for (var j = 0; j < size; j++) {
                 let field = fields[i][j];
-                let figure = field.figure !== null ? field.figure.name : "";
-                cells.push(<td className={"Field " + field.color + "Field"}><p><img src="PawnWhite.png" alt=""/> </p></td>);
-                 {/* cells.push(<Field gameField={this.props.game.gameField} coordi={i} coordj={j} size={size}/>); */}
+                let figure = field.figure !== null ? field.figure.name : '';
+                cells.push(<td className={'Field ' + field.color + 'Field'}><p><img src="PawnWhite.png" alt=""/> </p></td>);
+                {/* cells.push(<Field gameField={this.props.game.gameField} coordi={i} coordj={j} size={size}/>); */}
             }
-            var keyRow = "row" + i;
+            var keyRow = 'row' + i;
             rows.push(<tr key={keyRow}>{cells}</tr>);
             cells = [];
         }
@@ -33,15 +33,14 @@ class Board extends React.Component<any, any> {
                     </tbody>
                 </table>
             </div>
-        )
+        );
     }
-};
+}
 
-
-function mapStateToProps(state : any) {
+function mapStateToProps(state: any) {
     return {
         gameField: state.gameField
-    }
+    };
 }
 
 export default connect(mapStateToProps)(Board);

@@ -1,6 +1,6 @@
-import {ColorType} from "./ColorType"
+import { ColorType } from './ColorType';
 
 export interface IFigure {
-    name: string
-    color : ColorType
+    name: string;
+    color: ColorType;
 }

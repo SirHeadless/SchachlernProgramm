@@ -1,4 +1,4 @@
-export enum ColorType{
-    BLACK = "black",
-    WHITE = "white"
+export enum ColorType {
+    BLACK = 'black',
+    WHITE = 'white'
 }
