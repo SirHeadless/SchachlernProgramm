@@ -1,7 +1,16 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-class Points extends React.Component<any, any> {
+export namespace Points {
+    export interface Props {
+        points: string;
+    }
+    export interface State {
+        points: string;
+    }
+}
+
+class Points extends React.Component<Points.Props> {
 
     render() {
         return (

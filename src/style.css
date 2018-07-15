@@ -33,6 +33,7 @@ table {
     font-family: "Roboto", sans-serif;
     font-size:  4em;
     position: relative;
+
 }
 
 .blackField {
@@ -54,4 +55,8 @@ table {
 
 .errorMessage {
     color: #FF0000;
+}
+
+.imageTest{
+    width: 100%;
 }

@@ -6,8 +6,10 @@ export class Field {
     color: ColorType;
     active: Boolean;
 
-    constructor(color: ColorType, figure?: IFigure) {
+    constructor(color: ColorType, figure?: IFigure, active?: Boolean) {
         this.color = color;
-        this.figure = figure;
+        this.figure = figure || null;
+        this.active = active || false;
     }
+
 }

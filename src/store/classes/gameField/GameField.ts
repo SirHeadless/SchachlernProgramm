@@ -9,14 +9,14 @@ export class GameField {
     test = 'test';
     
     field: Array<Array<Field>> = [
-        [new Field(ColorType.BLACK, null) , new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null)],
-        [new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null) , new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null)],
-        [new Field(ColorType.BLACK, null) , new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null)],
-        [new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null) , new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null)],
-        [new Field(ColorType.BLACK, null) , new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, new Pawn(ColorType.BLACK)), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null)],
-        [new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null) , new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null)],
-        [new Field(ColorType.BLACK, null) , new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null)],
-        [new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null) , new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null), new Field(ColorType.WHITE, null), new Field(ColorType.BLACK, null)],
+        [new Field(ColorType.BLACK) , new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE)],
+        [new Field(ColorType.WHITE), new Field(ColorType.BLACK) , new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK)],
+        [new Field(ColorType.BLACK) , new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE)],
+        [new Field(ColorType.WHITE), new Field(ColorType.BLACK) , new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK)],
+        [new Field(ColorType.BLACK) , new Field(ColorType.WHITE), new Field(ColorType.BLACK, new Pawn(ColorType.BLACK)), new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE)],
+        [new Field(ColorType.WHITE), new Field(ColorType.BLACK) , new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK)],
+        [new Field(ColorType.BLACK) , new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE)],
+        [new Field(ColorType.WHITE), new Field(ColorType.BLACK) , new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK), new Field(ColorType.WHITE), new Field(ColorType.BLACK)],
     ];
 
     selectedField: Coordinate;
