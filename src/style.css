@@ -44,6 +44,14 @@ table {
     background: white;
 }
 
+.greenwhiteField {
+    background: greenyellow;
+}
+
+.greenblackField{
+    background: green;
+}
+
 .field p {
     margin: 0;
     position: absolute;

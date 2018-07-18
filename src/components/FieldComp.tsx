@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
-import { Game } from '../store/classes/Game';
 import {Field} from "../store/classes/gameField/field/Field";
+import {Coordinate} from "../store/classes/gameField/Coordinate";
 
 export namespace FieldComp {
     export interface Props {
@@ -9,40 +8,31 @@ export namespace FieldComp {
         coordi: number;
         coordj: number;
         size: number;
-        points: number;
+        activateField: (c: Coordinate) => void;
     }
 }
 
 class FieldComp extends React.Component<FieldComp.Props> {
     keyNr: number = (this.props.coordi * this.props.size + this.props.coordj);
     keyField = 'field' + this.keyNr;
-    cssStyle: string;
 
     handleClick() {
-        console.log(`Clicked on coordinate (${this.keyNr})`);
+        console.log(`Clicked on coordinate (${this.props.coordi}, ${this.props.coordj})`);
+        this.props.activateField(new Coordinate(this.props.coordi, this.props.coordj));
     }
     render() {
-        if ((this.props.coordi + this.props.coordj) % 2 === 0) {
-            this.cssStyle = 'field grey';
-        } else {
-            this.cssStyle = 'field';
-        }
         if (this.props.field.figure != null) {
             var image = require("../resources/PawnBlack.png");
         } else {
             var image = null;
         }
-        return <td key={this.keyField.toString()} onClick={this.handleClick.bind(this)} className={' ' + this.props.field.color + 'Field'}><img className="imageTest" src={image} alt=""/></td>;
+        var test = "";
+        if (this.props.field.active) {
+            test = "green";
+        }
+        return <td key={this.keyField.toString()} onClick={this.handleClick.bind(this)} className={' ' + test + this.props.field.color + 'Field'}><img className="imageTest" src={image} alt=""/></td>;
 
     }
-
-}
-// ${this.props.gameField.getField(this.props.coordi,this.props.coordj).figure}
-
-function mapStateToProps(state: Game) {
-    return {
-        points: state.points
-    };
 }
 
-export default connect(mapStateToProps)(FieldComp);
+export default FieldComp;
