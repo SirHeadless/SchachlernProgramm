@@ -12,16 +12,4 @@ export class Game {
     points: number = 0;
     level: number = 1;
 
-    setFieldActive(activeFieldPosition: Coordinate): Game {
-        var newGame = new Game(null);
-        newGame.gameField = this.gameField.setActive(activeFieldPosition);
-        newGame.points = this.points;
-        newGame.level = this.level;
-
-        return newGame;
-    }
-
-
-
-
 }

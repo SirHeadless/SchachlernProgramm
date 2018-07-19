@@ -30,16 +30,17 @@ export class GameField {
         this.field[activeFieldPosition.x][activeFieldPosition.y].active = false;
     }
 
-    deactivateAll(): void {
+    deactivateAll(): GameField {
         for (let row of this.field) {
             for (let field of row) {
                 field.active = false;
             }
         }
+        return new GameField(this.field, this.selectedField);
     }
 
-    getField(x: number, y: number): Field {
-        return this.field[x][y];
+    getField(coord: Coordinate): Field {
+        return this.field[coord.x][coord.y];
     }
 
     public toString = (): string => {
