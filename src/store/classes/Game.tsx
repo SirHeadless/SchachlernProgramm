@@ -1,6 +1,6 @@
 import { GameField } from './gameField/GameField';
-import {Coordinate} from "./gameField/Coordinate";
-import {Field} from "./gameField/field/Field";
+import { Coordinate } from './gameField/Coordinate';
+import { Field } from './gameField/field/Field';
 
 export class Game {
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {Field} from "../store/classes/gameField/field/Field";
-import {Coordinate} from "../store/classes/gameField/Coordinate";
+import { Field } from '../store/classes/gameField/field/Field';
+import { Coordinate } from '../store/classes/gameField/Coordinate';
 
 export namespace FieldComp {
     export interface Props {
@@ -21,14 +21,15 @@ class FieldComp extends React.Component<FieldComp.Props> {
         this.props.activateField(new Coordinate(this.props.coordi, this.props.coordj));
     }
     render() {
-        if (this.props.field.figure != null) {
-            var image = require("../resources/PawnBlack.png");
+        var figure = this.props.field.figure;
+        if (figure != null) {
+            var image = require('../resources/' + figure.name + figure.color + '.png');
         } else {
             var image = null;
         }
-        var test = "";
+        var test = '';
         if (this.props.field.active) {
-            test = "green";
+            test = 'green';
         }
         return <td key={this.keyField.toString()} onClick={this.handleClick.bind(this)} className={' ' + test + this.props.field.color + 'Field'}><img className="imageTest" src={image} alt=""/></td>;
 

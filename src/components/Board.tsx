@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { GameField } from '../store/classes/gameField/GameField';
-import FieldComp from "./FieldComp";
-import {Coordinate} from "../store/classes/gameField/Coordinate";
-import {Action, Dispatch} from "redux";
-import {OwnActions} from "../actions/action-types";
-import activateField = OwnActions.activateField;
+import FieldComp from './FieldComp';
+import { Coordinate } from '../store/classes/gameField/Coordinate';
+import { Action, Dispatch } from 'redux';
+import { OwnActions } from '../actions/action-types';
 
 export namespace Board {
     export interface Props {
@@ -17,7 +16,6 @@ export namespace Board {
         gameField: GameField;
     }
 }
-
 
 class Board extends React.Component<Board.Props> {
 
@@ -40,9 +38,9 @@ class Board extends React.Component<Board.Props> {
             rows.push(<tr key={keyRow}>{cells}</tr>);
             cells = [];
         }
-        var test =  "1"
+        var test =  '1';
         if (this.props.gameField.field[0][0].active) {
-            test = "test2";
+            test = 'test2';
         }
         return (
             <div>

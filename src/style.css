@@ -36,19 +36,19 @@ table {
 
 }
 
-.blackField {
+.BlackField {
     background: lightgrey;
 }
 
-.whiteField {
+.WhiteField {
     background: white;
 }
 
-.greenwhiteField {
+.greenWhiteField {
     background: greenyellow;
 }
 
-.greenblackField{
+.greenBlackField{
     background: green;
 }
 

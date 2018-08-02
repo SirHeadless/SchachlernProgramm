@@ -1,11 +1,11 @@
-import {GameField} from "../store/classes/gameField/GameField";
-import * as React from "react";
-import {Dispatch} from "redux";
-import Board from "./Board";
-import {OwnActions} from "../actions/action-types";
-import activateField = OwnActions.activateField;
-import {Coordinate} from "../store/classes/gameField/Coordinate";
-import {connect} from "react-redux";
+import { GameField } from '../store/classes/gameField/GameField';
+import * as React from 'react';
+import { Dispatch } from 'redux';
+import Board from './Board';
+import { OwnActions } from '../actions/action-types';
+import activateField = OwnActions.handleFieldClick;
+import { Coordinate } from '../store/classes/gameField/Coordinate';
+import { connect } from 'react-redux';
 
 namespace App {
     export interface Props {
@@ -18,7 +18,6 @@ namespace App {
     }
 }
 
-
 class App extends React.Component<App.Props> {
     render() {
         const { gameField, dispatch } = this.props;
@@ -26,11 +25,11 @@ class App extends React.Component<App.Props> {
         return (
             <div>
                 <Board
-                    gameField = {gameField}
-                    activateField = {(c : Coordinate) => dispatch(activateField(c))}
+                    gameField={gameField}
+                    activateField={(c: Coordinate) => dispatch(activateField(c))}
                 />
             </div>
-        )
+        );
     }
 }
 

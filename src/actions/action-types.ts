@@ -1,35 +1,13 @@
-import {Coordinate} from "../store/classes/gameField/Coordinate";
-import {createAction} from "redux-actions";
-
+import { Coordinate } from '../store/classes/gameField/Coordinate';
+import { createAction } from 'redux-actions';
 
 export namespace OwnActions {
     export enum ActionTypes {
-        ACTIVATE_FILED = 'activate_field',
+        HANDLE_FIELD_CLICK = 'activate_field',
         DEACTIVATE_FIELD = 'deactivate_field'
     }
 
-    export const activateField = createAction<Coordinate>(ActionTypes.ACTIVATE_FILED);
+    export const handleFieldClick = createAction<Coordinate>(ActionTypes.HANDLE_FIELD_CLICK);
     export const deactivateField = createAction<Coordinate>(ActionTypes.DEACTIVATE_FIELD);
 
-    // export type OwnAction = {
-    //     type: ActionTypes.ACTIVATE_FILED
-    //     delta: Coordinate
-    // } | {
-    //     type: ActionTypes.DEACTIVATE_FIELD,
-    //     delta: Coordinate
-    // }
-
-    // export const activateField = (delta: Coordinate): OwnAction => ({
-    //     type: ActionTypes.ACTIVATE_FILED,
-    //     delta,
-    // })
-
-    // export  const deactivateField = (delta: Coordinate): OwnAction => ({
-    //     type: ActionTypes.DEACTIVATE_FIELD,
-    //     delta,
-    // })
-
-
 }
-
-

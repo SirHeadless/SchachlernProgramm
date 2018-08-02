@@ -1,8 +1,8 @@
 import { ColorType } from './ColorType';
 import { IFigure } from './IFigure';
 
-export class Pawn implements IFigure {
-    name = 'Pawn';
+export class King implements IFigure {
+    name = 'King';
     color: ColorType;
 
     constructor(color: ColorType) {

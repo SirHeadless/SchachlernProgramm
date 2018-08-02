@@ -4,7 +4,7 @@
 //
 // function reducer(action: OwnAction): Store<Game> {
 //     switch (action.type) {
-//         case ActionTypes.ACTIVATE_FILED:
+//         case ActionTypes.HANDLE_FIELD_CLICK:
 //             return
 //     }
 //
